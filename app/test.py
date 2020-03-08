@@ -18,6 +18,9 @@ class TestDockerapp(unittest.TestCase):
         assert response.status_code == 200
         assert b'2' in response.data
         assert b'two' in response.data
-
+        
+    def test_fail(self):
+        assert 1 == 2
+        
 if __name__=='__main__':
     unittest.main()
